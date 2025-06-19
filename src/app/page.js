@@ -3,6 +3,7 @@
 import "@/styles/globals.css";
 
 import Hero from "@/components/ui/Hero";
+import PitchingTagline from '@/components/ui/PitchingTagline';
 import HowWeWork from "@/components/ui/HowWeWork";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="w-full overflow-hidden relative">
       <Navbar />
       <Hero />
+      <PitchingTagline />
       <Feature />
       <TimelineStorySection />
       <div className="relative w-full h-auto">

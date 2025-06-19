@@ -57,7 +57,7 @@ export default function Hero() {
           />
         </div>
       </div>
-
+      
       {/* Buttons */}
       {/* <div className="flex flex-col md:flex-row gap-4 mt-8 z-10">
         <button className="px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition">
