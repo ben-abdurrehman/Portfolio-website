@@ -3,17 +3,15 @@
 import Link from "next/link";
 import CONSTANTS from "@/constants";
 import Image from "next/image";
-import ben1 from "@/assets/BG-remove2.png";
-import linesBG from "@/assets/lines-bg.png"
-import gradientOverlay from "@/assets/GradientOverlay.png"
+
 // import '@/styles/globals.css';
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-start min-h-[100vh] bg-black py-20 text-white overflow-hidden px-4">
       {/* Intro */}
-      <Image src={linesBG} className="z-10 bg-gradient-to-b from-40% from-transparent via-60% via-transparent to-black absolute w-[100vw] h-[100vh]" />
-      <Image src={gradientOverlay} className="z-30 grayscale-100 absolute bottom-0 w-[100vw] h-[10vh]" />
+      <Image src="/lines-bg.png" className="z-10 bg-gradient-to-b from-40% from-transparent via-60% via-transparent to-black absolute w-[100vw] h-[100vh]" />
+      <Image src="/gradientoverlay.png" className="z-30 grayscale-100 absolute bottom-0 w-[100vw] h-[10vh]" />
       <div className="flex flex-col">
         <div className="mt-8 text-center z-10">
           <span className="text-xl md:text-2xl flex items-center justify-center gap-2 mb-2">
@@ -49,7 +47,7 @@ export default function Hero() {
       <div className="absolute top-32 bottom-0 right-0 z-10 flex justify-center w-full h-full">
         <div className="w-80 h-[600px] md:w-[400px] grayscale-100 overflow-hidden  shadow-xl">
           <Image
-            src={ben1}
+            src="/bg-remove2.png"
             alt="Abdur Rehman portrait"
             fill
             style={{ objectFit: 'cover' }}
