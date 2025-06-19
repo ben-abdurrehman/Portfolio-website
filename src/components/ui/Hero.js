@@ -10,8 +10,8 @@ export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-start min-h-[100vh] bg-black py-20 text-white overflow-hidden px-4">
       {/* Intro */}
-      <Image src="/lines-bg.png" className="z-10 bg-gradient-to-b from-40% from-transparent via-60% via-transparent to-black absolute w-[100vw] h-[100vh]" />
-      <Image src="/gradientoverlay.png" className="z-30 grayscale-100 absolute bottom-0 w-[100vw] h-[10vh]" />
+      <Image src="/lines-bg.png" className="z-10 bg-gradient-to-b from-40% from-transparent via-60% via-transparent to-black absolute w-[100vw] h-[100vh]" width={100} height={100}/>
+      <Image src="/gradientoverlay.png" className="z-30 grayscale-100 absolute bottom-0 w-[100vw] h-[10vh]" width={100} height={10} />
       <div className="flex flex-col">
         <div className="mt-8 text-center z-10">
           <span className="text-xl md:text-2xl flex items-center justify-center gap-2 mb-2">
