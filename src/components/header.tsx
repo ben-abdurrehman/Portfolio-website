@@ -55,7 +55,7 @@ export function Header() {
             className="flex items-center space-x-2"
           >
             <Code className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold">DevPortfolio</span>
+            <span className="text-xl font-inter font-bold">BA.</span>
           </motion.div>
 
           {/* Desktop Navigation */}

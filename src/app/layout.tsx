@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   title: 'Professional Developer | Websites & Apps That Convert',
   description: 'Expert web developer specializing in modern websites and applications that drive results. Get in touch for your next project.',
   keywords: 'web developer, websites, apps, development, responsive design, SEO',
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  authors: [{ name: 'Abdurrehman' }],
+  creator: 'Ben Abdurrehman',
   openGraph: {
     title: 'Professional Developer | Websites & Apps That Convert',
     description: 'Expert web developer specializing in modern websites and applications that drive results.',
-    url: 'https://yourwebsite.com',
-    siteName: 'Your Portfolio',
+    url: 'https://benabdurrehman.com',
+    siteName: 'Ben Abdurrehman',
     images: [
       {
         url: '/og-image.jpg',
