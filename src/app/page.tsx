@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/header';
 import Hero from '@/components/hero';
+import PitchingTagline from '@/components/boltedTextSection';
 import { About } from '@/components/about';
 import { Services } from '@/components/services';
 import { Work } from '@/components/work';
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen w-[100vw] overflow-hidden bg-background">
       <Header />
       <Hero />
+      <PitchingTagline />
       <About />
       <Services />
       <Work />
