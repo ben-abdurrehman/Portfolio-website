@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative bg-black px-6 sm:px-8">
+    <section id="about" className="py-24 relative bg-black px-6 sm:px-20">
       <div className="absolute z-0 top-0 bottom-0 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,188,166,0.5),transparent_50%)]"></div>
       <div className="z-20 max-w-7xl flex items-center justify-center mx-auto">
         <motion.div
@@ -29,7 +29,7 @@ export function About() {
               <AnimatedHeadline
                 text="I'm Abdurrehman, a full stack-web developer, who design and develop custom web solutions. I don't only create websites, I turn your physical presence into digital presence, I create an emotional and an everlasting connection between you and your clients, this is what I've been doing it for 4 years. So what are you waiting for?"
                 as="h3"
-                className="text-3xl md:text-4xl font-semibold text-left"
+                className="text-3xl md:text-2xl font-medium text-justify"
               />
             </div>
             <motion.div
