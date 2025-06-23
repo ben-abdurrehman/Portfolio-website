@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import CalFloatingButton from './cal.com';
+
+
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -68,12 +71,13 @@ export function Header() {
                 {item.name}
               </button>
             ))}
-            <Button 
+            {/* <Button 
               onClick={() => handleNavClick('#contact')}
               className="ml-4"
             >
               Get In Touch
-            </Button>
+            </Button> */}
+            <CalFloatingButton />
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,12 +116,13 @@ export function Header() {
                     {item.name}
                   </button>
                 ))}
-                <Button 
+                {/* <Button 
                   onClick={() => handleNavClick('#contact')}
                   className="w-full mt-4"
                 >
                   Get In Touch
-                </Button>
+                </Button> */}
+                <CalFloatingButton />
               </div>
             </motion.div>
           )}
