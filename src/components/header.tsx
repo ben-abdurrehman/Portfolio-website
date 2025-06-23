@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -54,8 +54,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             className="flex items-center space-x-2"
           >
-            <Code className="h-8 w-8 text-primary" />
-            <span className="text-xl font-inter font-bold">BA.</span>
+            <span className="text-xl font-inter font-bold">BenA.</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -1,13 +1,16 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Badge } from '@/components/ui/badge';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import AnimatedHeadline from "./AnimatedHeadline";
+import { Button } from "@/components/ui/button";
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-black px-6 sm:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="py-24 relative bg-black px-6 sm:px-8">
+      <div className="absolute z-0 top-0 bottom-0 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,188,166,0.5),transparent_50%)]"></div>
+      <div className="z-20 max-w-7xl flex items-center justify-center mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,48 +19,33 @@ export function About() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
         >
           {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="flex flex-col items-start gap-5">
+            <div className="space-y-8">
               <Badge variant="outline" className="w-fit">
                 About Me
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                How I Can Help You
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm Mohammad, a Full Stack Web Developer focused on creating digital experiences 
-                that combine beautiful design with flawless functionality.
-              </p>
             </div>
-
             <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Frontend Expertise</h3>
-                <p className="text-muted-foreground">
-                  I specialize in React, Next.js, and modern JavaScript to create 
-                  responsive, interactive user interfaces that users love.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Backend Development</h3>
-                <p className="text-muted-foreground">
-                  From Node.js to database design, I build robust backend systems 
-                  that power your applications efficiently and securely.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Performance & SEO</h3>
-                <p className="text-muted-foreground">
-                  Every project is optimized for speed and search engines, 
-                  ensuring your site performs well and ranks high.
-                </p>
-              </div>
+              <AnimatedHeadline
+                text="I'm Abdurrehman, a full stack-web developer, who design and develop custom web solutions. I don't only create websites, I turn your physical presence into digital presence, I create an emotional and an everlasting connection between you and your clients, this is what I've been doing it for 4 years. So what are you waiting for?"
+                as="h3"
+                className="text-3xl md:text-4xl font-semibold text-left"
+              />
             </div>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center mt-2"
+            >
+              <Button variant="outline" size="lg">
+                Choose a plan
+              </Button>
+            </motion.div>
+          </div>
+          {/* Trust Badges */}
+          {/* <div className="flex flex-wrap gap-4 pt-4">
               {[
                 'React Certified',
                 'AWS Certified', 
@@ -68,8 +56,7 @@ export function About() {
                   {badge}
                 </Badge>
               ))}
-            </div>
-          </div>
+            </div> */}
 
           {/* Image */}
           <motion.div
@@ -79,20 +66,21 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-blue-500/20">
+            <div className="relative  h-[500px] overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+                src="/My-talk.png"
                 alt="Developer portrait"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+              <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-20" width={100} height={10} />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" /> */}
             </div>
-            
+
             {/* Floating Card */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -101,7 +89,7 @@ export function About() {
             >
               <div className="text-2xl font-bold text-primary">100+</div>
               <div className="text-sm text-muted-foreground">Happy Clients</div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>
