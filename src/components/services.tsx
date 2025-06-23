@@ -1,53 +1,58 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Code, Palette, Rocket, Search, Smartphone, Zap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import {services} from '@/data/objects/Features'
+import Image from 'next/image';
 
-const services = [
-  {
-    icon: Code,
-    title: 'Development',
-    description: 'Clean, modern code built with the latest technologies and best practices.',
-    features: ['React & Next.js', 'TypeScript', 'API Integration', 'Database Design']
-  },
-  {
-    icon: Palette,
-    title: 'Design',
-    description: 'Beautiful, user-centered designs that convert visitors into customers.',
-    features: ['UI/UX Design', 'Responsive Layout', 'Brand Identity', 'Prototyping']
-  },
-  {
-    icon: Rocket,
-    title: 'Launch',
-    description: 'Seamless deployment and ongoing support to keep your site running smoothly.',
-    features: ['Cloud Hosting', 'CI/CD Pipeline', 'Monitoring', 'Maintenance']
-  },
-  {
-    icon: Search,
-    title: 'SEO Optimization',
-    description: 'Boost your visibility with technical SEO and performance optimization.',
-    features: ['Technical SEO', 'Core Web Vitals', 'Schema Markup', 'Site Speed']
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile First',
-    description: 'Mobile-optimized experiences that work perfectly on any device.',
-    features: ['Responsive Design', 'Touch Optimization', 'PWA Features', 'Cross-Browser']
-  },
-  {
-    icon: Zap,
-    title: 'Performance',
-    description: 'Lightning-fast websites that provide exceptional user experiences.',
-    features: ['Code Splitting', 'Lazy Loading', 'CDN Integration', 'Caching Strategy']
-  }
-];
+// const services = [
+
+//   {
+//     icon: Code,
+//     title: 'Development',
+//     description: 'Clean, modern code built with the latest technologies and best practices.',
+//     features: ['React & Next.js', 'TypeScript', 'API Integration', 'Database Design']
+//   },
+//   {
+//     icon: Palette,
+//     title: 'Design',
+//     description: 'Beautiful, user-centered designs that convert visitors into customers.',
+//     features: ['UI/UX Design', 'Responsive Layout', 'Brand Identity', 'Prototyping']
+//   },
+//   {
+//     icon: Rocket,
+//     title: 'Launch',
+//     description: 'Seamless deployment and ongoing support to keep your site running smoothly.',
+//     features: ['Cloud Hosting', 'CI/CD Pipeline', 'Monitoring', 'Maintenance']
+//   },
+//   {
+//     icon: Search,
+//     title: 'SEO Optimization',
+//     description: 'Boost your visibility with technical SEO and performance optimization.',
+//     features: ['Technical SEO', 'Core Web Vitals', 'Schema Markup', 'Site Speed']
+//   },
+//   {
+//     icon: Smartphone,
+//     title: 'Mobile First',
+//     description: 'Mobile-optimized experiences that work perfectly on any device.',
+//     features: ['Responsive Design', 'Touch Optimization', 'PWA Features', 'Cross-Browser']
+//   },
+//   {
+//     icon: Zap,
+//     title: 'Performance',
+//     description: 'Lightning-fast websites that provide exceptional user experiences.',
+//     features: ['Code Splitting', 'Lazy Loading', 'CDN Integration', 'Caching Strategy']
+//   }
+// ];
+
 
 export function Services() {
   return (
-    <section id="services" className="py-24 px-6 sm:px-8 bg-muted/20">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="relative  min-h-[100vh] flex flex-col items-center justify-start  px-6 overflow-hidden bg-black">
+      <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-20" width={100} height={10} />
+      <Image src="/Linespattern.png" alt="background-lines" className="z-0 absolute w-[100vw] h-auto select-none" width={100} height={100}/>
+      <div className="max-w-7xl py-20 z-20 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

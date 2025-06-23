@@ -1,57 +1,40 @@
-import PDFExport from '@/assets/AccordionImages/pdf-file.png';
+import { Code, Palette, Rocket, Search, Smartphone, Zap } from 'lucide-react';
 
-// import Lottie from "lottie-react";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
-
-
-export const featuresDetails = [
+export const services = [
   {
-    title: 'PDF Export',
-    description: "Download clean, client-ready invoices in seconds.",
+    icon: Palette,
+    title: 'Design',
+    description: 'Beautiful, user-centered designs that convert visitors into customers.',
+    features: ['UI/UX Design', 'Responsive Layout', 'Brand Identity', 'Prototyping']
   },
   {
-    title: 'Save Templates',
-    description: "Reuse your invoice layout and items without typing it all again.",
+    icon: Code,
+    title: 'Development',
+    description: 'Clean, modern code built with the latest technologies and best practices.',
+    features: ['React & Next.js', 'TypeScript', 'API Integration', 'Database Design']
   },
   {
-    title: 'Brand It Your Way',
-    description: "Add your logo, company name, and custom colors.",
+    icon: Smartphone,
+    title: 'Mobile First',
+    description: 'Mobile-optimized experiences that work perfectly on any device.',
+    features: ['Responsive Design', 'Touch Optimization', 'PWA Features', 'Cross-Browser']
   },
   {
-    title: 'Email Invoices (Coming Soon)',
-    description: "Send invoices directly to clients from the dashboard.",
-  },
-];
-
-
-export const featuresImages = [
-  {
-    image: <DotLottieReact
-              src="https://lottie.host/ec2b374f-dd7d-47c7-b4f5-48cd19b927be/Y1rXSDHAWq.lottie"
-              loop
-              autoplay
-            />,
+    icon: Search,
+    title: 'SEO Optimization',
+    description: 'Boost your visibility with technical SEO and performance optimization.',
+    features: ['Technical SEO', 'Core Web Vitals', 'Schema Markup', 'Site Speed']
   },
   {
-    image:  <DotLottieReact
-              src="https://lottie.host/cd584943-c5e8-419e-b644-5334961ea6bb/3yxRrW7srp.lottie"
-              loop
-              autoplay
-            />,
+    icon: Zap,
+    title: 'Performance',
+    description: 'Lightning-fast websites that provide exceptional user experiences.',
+    features: ['Code Splitting', 'Lazy Loading', 'CDN Integration', 'Caching Strategy']
   },
   {
-    image:   <DotLottieReact
-                src="https://lottie.host/406824f0-ab2c-4499-ab23-3a66bdb61974/vdrNMsKzEw.lottie"
-                loop
-                autoplay
-              />,
-  },
-  {
-    image: <DotLottieReact
-              src="https://lottie.host/6082dc37-1497-4ccf-8382-c13c2ecb9eef/yp931H0n0f.lottie"
-              loop
-              autoplay
-            />,
+    icon: Rocket,
+    title: 'Launch',
+    description: 'Seamless deployment and ongoing support to keep your site running smoothly.',
+    features: ['Cloud Hosting', 'CI/CD Pipeline', 'Monitoring', 'Maintenance']
   },
 ];
