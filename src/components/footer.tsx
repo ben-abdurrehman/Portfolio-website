@@ -1,50 +1,16 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Code, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { socialLinks } from '@/data/objects/footerdata'
+import { footerLinks } from '@/data/objects/footerdata'
+import Link from 'next/link';
 
-const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:hello@yourname.com', label: 'Email' },
-];
-
-const footerLinks = [
-  {
-    title: 'Services',
-    links: [
-      { name: 'Web Development', href: '#services' },
-      { name: 'UI/UX Design', href: '#services' },
-      { name: 'SEO Optimization', href: '#services' },
-      { name: 'Maintenance', href: '#services' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { name: 'About', href: '#about' },
-      { name: 'Work', href: '#work' },
-      { name: 'Process', href: '#services' },
-      { name: 'Contact', href: '#contact' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Blog', href: '#' },
-      { name: 'Case Studies', href: '#work' },
-      { name: 'FAQ', href: '#faq' },
-      { name: 'Support', href: '#contact' },
-    ],
-  },
-];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const website = 'https://benabdurrehman.com';
   const handleNavClick = (href: string) => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href);
@@ -68,8 +34,7 @@ export function Footer() {
                 viewport={{ once: true }}
                 className="flex items-center space-x-2"
               >
-                <Code className="h-8 w-8 text-primary" />
-                <span className="text-xl font-bold">DevPortfolio</span>
+                <span className="text-xl font-bold">Ben A.</span>
               </motion.div>
               
               <motion.p
@@ -149,7 +114,13 @@ export function Footer() {
           className="py-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0"
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} DevPortfolio. All rights reserved.
+            © {currentYear} 
+            <Link href={website} >
+                <span className='font-semibold text-white hover:text-cyan-500'>
+                &nbsp;Ben A.&nbsp;  
+                </span>
+              </Link> 
+                All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-sm text-muted-foreground">
             <button className="hover:text-primary transition-colors">

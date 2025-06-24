@@ -76,7 +76,6 @@ export function About() {
                 priority
               />
               <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-20" width={100} height={10} />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" /> */}
             </div>
 
             {/* Floating Card */}

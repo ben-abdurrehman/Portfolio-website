@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +13,9 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
+import { contactInfo } from '@/data/objects/contactInfo'
+import CalFloatingButton from './cal.com';
+
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -21,26 +24,6 @@ const formSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'hello@yourname.com',
-    href: 'mailto:hello@yourname.com'
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567'
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'New York, NY',
-    href: '#'
-  }
-];
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -133,9 +116,7 @@ export function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="secondary" className="w-full">
-                  Schedule Call
-                </Button>
+              <CalFloatingButton bgColor="bg-black"/>
               </CardContent>
             </Card>
           </motion.div>

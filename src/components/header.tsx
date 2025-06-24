@@ -57,7 +57,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             className="flex items-center space-x-2"
           >
-            <span className="text-xl font-inter font-bold">BenA.</span>
+            <span className="text-xl font-inter font-bold">Ben A.</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -77,7 +77,7 @@ export function Header() {
             >
               Get In Touch
             </Button> */}
-            <CalFloatingButton />
+            <CalFloatingButton bgColor="bg-white"/>
           </div>
 
           {/* Mobile Menu Button */}

@@ -8,6 +8,7 @@ import { Work } from '@/components/work';
 import { FAQ } from '@/components/faq';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
+// import { ProjectFanGrid } from '@/components/projectFanGrid';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <PitchingTagline />
       <About />
       <Services />
+      {/* <ProjectFanGrid /> */}
       <Work />
       <FAQ />
       <Contact />
