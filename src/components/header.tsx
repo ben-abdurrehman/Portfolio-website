@@ -122,7 +122,7 @@ export function Header() {
                 >
                   Get In Touch
                 </Button> */}
-                <CalFloatingButton />
+                <CalFloatingButton bgColor="bg-white"/>
               </div>
             </motion.div>
           )}
