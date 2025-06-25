@@ -31,8 +31,8 @@ const AnimatedHeadline = forwardRef<HTMLElement, AnimatedHeadlineProps>(
           color: "#fff",
           scrollTrigger: {
             trigger: innerRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
+            start: "top 90%",
+            end: "bottom 90%",
             scrub: true,
           },
           stagger: 0.03,
