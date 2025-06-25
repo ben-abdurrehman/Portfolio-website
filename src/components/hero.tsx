@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center md:justify-start min-h-[90vh] md:min-h-[100vh] bg-black py-20 text-white overflow-hidden px-4">
+    <section className="relative flex flex-col items-center justify-start min-h-[90vh] md:min-h-[100vh] bg-black py-20 text-white overflow-hidden px-4">
       {/* Intro */}
       <Image src="/lines-bg.png" alt="background-lines" className="z-10 bg-gradient-to-b from-40% from-transparent via-60% via-transparent to-black absolute w-[100vw] h-[100vh]" width={100} height={100}/>
       <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-[100vw] h-[10vh]" width={100} height={10} />
