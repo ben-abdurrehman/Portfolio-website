@@ -40,7 +40,7 @@ export default function Hero() {
       
 
       {/* Photo */}
-      <div className="absolute top-64 bottom-0 right-0 z-10 flex justify-center w-full h-full">
+      <div className="absolute top-64 md:top-32 bottom-0 right-0 z-10 flex justify-center w-full h-full">
         <div className="w-80 h-[600px] md:w-[400px] grayscale-100 overflow-hidden  shadow-xl">
           <div className="absolute rounded-full w-full lg:w-1/2 h-full mx-auto -z-10 inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,188,166,0.5),transparent_50%)]"></div> 
           <Image

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 // import { db } from '@/lib/firebase';
 // import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import emailjs from 'emailjs-com';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Send } from 'lucide-react';
@@ -41,22 +42,37 @@ export function Contact() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log(values);
-    
+
+const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      values,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
+
     toast({
       title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      description: "You'll receive an email confirmation soon.",
     });
-    
+
     form.reset();
-    setIsSubmitting(false);
-  };
+
+  } catch (error) {
+    console.error('EmailJS error:', error);
+    toast({
+      title: "Failed to send",
+      description: "Please try again later.",
+      variant: "destructive",
+    });
+  }
+
+  setIsSubmitting(false);
+};
+
 
   return (
     <section id="contact" className="py-24 px-6 sm:px-8">
@@ -228,14 +244,13 @@ export function Contact() {
 }
 
 
-// Assuming your firebase config file is in utils/firebase.ts
 
 // "use client";
 
 // import { useState } from 'react';
 // import { motion } from 'framer-motion';
 // import { useForm } from 'react-hook-form';
-// import { db } from '@/utils/firebase';
+// import { db } from '@/lib/firebase';
 // import { collection, addDoc, Timestamp } from 'firebase/firestore';
 // import { zodResolver } from '@hookform/resolvers/zod';
 // import * as z from 'zod';
