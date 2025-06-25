@@ -64,7 +64,7 @@ export function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative "
+            className="relative hidden md:block"
           >
             <div className="relative  h-[500px] overflow-hidden">
               <Image
