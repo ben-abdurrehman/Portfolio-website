@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'Ben Abdurrehman',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/favicon.svg',
         width: 1200,
         height: 630,
       },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Developer | Websites & Apps That Convert',
     description: 'Expert web developer specializing in modern websites and applications that drive results.',
-    images: ['/og-image.jpg'],
+    images: ['/favicon.svg'],
   },
   robots: {
     index: true,
@@ -83,6 +83,40 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
       <link rel="icon" href="/favicon.svg" sizes="any" />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "benabdurrehman",
+              "url": "https://benabdurrehman.com",
+              "logo": "/favicon.svg",
+              "founders": [
+                {
+                  "@type": "Person",
+                  "name": "Abdurrehman"
+                }
+              ],
+              "foundingDate": "2025-6-01",
+              "foundingLocation": "Lahore, Pakistan",
+              "sameAs": [
+                "https://linkedin.com/in/abdurrehman-waseem/",
+                "https://instagram.com/benabdurrehman",
+                "https://github.com/ben-abdurrehman/",
+                "https://www.upwork.com/freelancers/~01669495152aa87771"
+              ],
+              "description": "Expert web developer specializing in modern websites and applications that drive results.",
+              "location": {
+                "@type": "Place",
+                "address": {
+                  "addressLocality": "Lahore",
+                  "addressCountry": "Pakistan"
+                }
+              },
+            })
+          }}
+        />
       </head>
       <body className={`${bigShoulders.variable} ${inter.variable} ${poppins.variable}`}>
         <ThemeProvider

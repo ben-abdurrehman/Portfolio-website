@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export function FaqCta() {
   return (
-    <section className="bg-black relative w-auto md:w-6xl z-20 rounded-2xl overflow-hidden text-white text-center">
+    <section className="bg-black relative w-auto md:w-6xl ring-1 ring-cyan-500 z-20 rounded-2xl overflow-hidden text-white text-center">
       <Image src="/Small-pattern.png" alt="background-lines" className="-z-10 absolute w-full h-full select-none" width={100} height={100}/>
       <div className="w-auto md:max-w-3xl z-30 mx-auto p-5 md:p-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">

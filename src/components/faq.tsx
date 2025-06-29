@@ -9,7 +9,7 @@ import {faqs} from '@/data/objects/faq'
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 flex flex-col items-center gap-10 px-6 sm:px-8 bg-muted/20">
+    <section id="faq" className="relative bg-black py-24 flex flex-col items-center gap-10 px-6 sm:px-8 ">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

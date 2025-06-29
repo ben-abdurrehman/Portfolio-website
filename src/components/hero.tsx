@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import Image from "next/image";
 
 // import '@/styles/globals.css';
@@ -24,17 +23,6 @@ export default function Hero() {
                Software Engineer
             </span>
           </h1>
-          {/* <h2
-            className="font-extrabold text-4xl md:text-6xl text-center mt-2 mb-4 text-transparent"
-            style={{
-              WebkitTextStroke: '2px #fff',
-              color: 'transparent',
-              textStroke: '2px #fff',
-              opacity: 0.2,
-            }}
-          >
-            & Photographer
-          </h2> */}
         </div>
       </div>
       
@@ -55,16 +43,6 @@ export default function Hero() {
           />
         </div>
       </div>
-      
-      {/* Buttons */}
-      {/* <div className="flex flex-col md:flex-row gap-4 mt-8 z-10">
-        <button className="px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition">
-          You need a designer
-        </button>
-        <button className="px-6 py-3 rounded-lg border border-white text-white font-semibold hover:bg-white hover:text-black transition">
-          You need a photographer
-        </button>
-      </div> */}
     </section>
   );
 }

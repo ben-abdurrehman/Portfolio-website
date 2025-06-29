@@ -21,8 +21,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <footer className="bg-black p-10 relative bottom-0">
+      <div className="max-w-6xl rounded-2xl hover:ring-2 transition-all ring-1 ring-cyan-500 mx-auto px-6 sm:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -65,7 +65,7 @@ export function Footer() {
                     variant="ghost"
                     size="sm"
                     asChild
-                    className="hover:bg-primary/10"
+                    className="hover:bg-primary/10 hover:scale-95 transition-all duration-300"
                   >
                     <a
                       href={social.href}
@@ -96,7 +96,7 @@ export function Footer() {
                     <li key={link.name}>
                       <button
                         onClick={() => handleNavClick(link.href)}
-                        className="text-muted-foreground font-poppins hover:text-primary transition-colors text-sm"
+                        className="text-muted-foreground font-poppins hover:text-primary transition-all  text-sm"
                       >
                         {link.name}
                       </button>

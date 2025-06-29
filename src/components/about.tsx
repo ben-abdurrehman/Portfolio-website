@@ -44,19 +44,6 @@ export function About() {
               </Button>
             </motion.div>
           </div>
-          {/* Trust Badges */}
-          {/* <div className="flex flex-wrap gap-4 pt-4">
-              {[
-                'React Certified',
-                'AWS Certified', 
-                '50+ Projects',
-                '5 Star Rating'
-              ].map((badge) => (
-                <Badge key={badge} variant="secondary">
-                  {badge}
-                </Badge>
-              ))}
-            </div> */}
 
           {/* Image */}
           <motion.div
@@ -77,18 +64,6 @@ export function About() {
               />
               <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-20" width={100} height={10} />
             </div>
-
-            {/* Floating Card */}
-            {/* <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-8 -right-8 bg-card p-6 rounded-xl shadow-lg border"
-            >
-              <div className="text-2xl font-bold text-primary">100+</div>
-              <div className="text-sm text-muted-foreground">Happy Clients</div>
-            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>

@@ -71,12 +71,6 @@ export function Header() {
                 {item.name}
               </button>
             ))}
-            {/* <Button 
-              onClick={() => handleNavClick('#contact')}
-              className="ml-4"
-            >
-              Get In Touch
-            </Button> */}
             <CalFloatingButton bgColor="bg-white"/>
           </div>
 
