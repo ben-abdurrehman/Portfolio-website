@@ -91,7 +91,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "benabdurrehman",
               "url": "https://benabdurrehman.com",
-              "logo": "/favicon.svg",
+              "logo": "https://benabdurrehman.com/logo.png",
               "founders": [
                 {
                   "@type": "Person",
