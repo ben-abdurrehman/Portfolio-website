@@ -28,13 +28,13 @@ export const footerLinks = [
       { name: 'Contact', href: '#contact' },
     ],
   },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Blog', href: '#' },
-      { name: 'Case Studies', href: '#work' },
-      { name: 'FAQ', href: '#faq' },
-      { name: 'Support', href: '#contact' },
-    ],
-  },
+  // {
+  //   title: 'Resources',
+  //   links: [
+  //     { name: 'Blog', href: '#' },
+  //     { name: 'Case Studies', href: '#work' },
+  //     { name: 'FAQ', href: '#faq' },
+  //     { name: 'Support', href: '#contact' },
+  //   ],
+  // },
 ];

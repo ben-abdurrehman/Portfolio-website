@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type HeadingTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
 
 type AnimatedHeadlineProps = {
   text: string;
@@ -16,7 +16,7 @@ type AnimatedHeadlineProps = {
 };
 
 const AnimatedHeadline = forwardRef<HTMLElement, AnimatedHeadlineProps>(
-  ({ text, as: HeadingTag = "h1", className = "text-5xl md:text-7xl lg:text-8xl font-bold leading-tight" }, ref) => {
+  ({ text, as: HeadingTag = "h1", className = "text-5xl md:text-7xl lg:text-8xl font-bigshoulders font-bold leading-tight" }, ref) => {
     const innerRef = useRef<HTMLHeadingElement>(null);
     const combinedRef = ref || innerRef;
 

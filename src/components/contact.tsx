@@ -18,6 +18,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import { contactInfo } from '@/data/objects/contactInfo'
 import CalFloatingButton from './cal.com';
+import Link from 'next/link';
 
 
 const formSchema = z.object({
@@ -90,7 +91,7 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Let's Build Your Vision
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm  md:text-base text-muted-foreground font-poppins max-w-2xl mx-auto">
             Let me know your vision, goals, and business requirements so I can provide the 
             best quote to make creating your digital vision a reality.
           </p>
@@ -114,12 +115,12 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
                     </div>
                     <div>
                       <p className="font-medium">{info.label}</p>
-                      <a 
+                      <Link 
                         href={info.href}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground tracking-wide md:tracking-normal hover:text-primary transition-colors"
                       >
                         {info.value}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -129,7 +130,7 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
             <Card className="bg-primary text-primary-foreground">
               <CardHeader>
                 <CardTitle>Ready to start?</CardTitle>
-                <CardDescription className="text-primary-foreground/80">
+                <CardDescription className="text-sm md:text-base text-primary-foreground/80 font-poppins">
                   Book your discovery call now!
                 </CardDescription>
               </CardHeader>
@@ -150,14 +151,14 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
             <Card>
               <CardHeader>
                 <CardTitle>Send me a message</CardTitle>
-                <CardDescription>
+                <CardDescription className='text-sm md:text-base font-poppins'>
                   I'll get back to you within 24 hours.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="font-poppins space-y-6">
+                    <div className=" grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="name"

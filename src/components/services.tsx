@@ -51,7 +51,7 @@ export function Services() {
   return (
     <section id="services" className="relative  min-h-[100vh] flex flex-col items-center justify-start  px-6 overflow-hidden bg-black">
       <Image src="/gradientoverlay.png" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-20" width={100} height={10} />
-      <Image src="/Linespattern.png" alt="background-lines" className="z-0 absolute w-[100vw] h-auto select-none" width={100} height={100}/>
+        <Image src="/Linespattern.png" alt="background-lines" className="z-0 absolute w-[100vw] h-auto select-none" width={100} height={100}/>
       <div className="max-w-7xl py-20 z-20 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function Services() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Here's How It Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base font-poppins text-muted-foreground max-w-2xl mx-auto">
             I use a proven process to deliver exceptional results, from initial concept 
             to final deployment and beyond.
           </p>
@@ -81,14 +81,14 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 group">
+              <Card className="h-full ring-2 ring-gray-900 hover:ring-cyan-500 transition-shadow duration-300 group">
                 <CardHeader className="space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className="text-sm md:text-base font-poppins leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </div>
@@ -96,7 +96,7 @@ export function Services() {
                 <CardContent>
                   <div className="space-y-2">
                     {service.features.map((feature) => (
-                      <div key={feature} className="flex items-center text-sm text-muted-foreground">
+                      <div key={feature} className="flex font-poppins items-center text-sm md:text-base text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
                         {feature}
                       </div>

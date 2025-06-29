@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 export function About() {
   return (
     <section id="about" className="py-24 relative bg-black px-6 sm:px-20">
-      <div className="hidden mg:flex absolute z-0 top-0 bottom-0 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,188,166,0.5),transparent_50%)]"></div>
+      <div className="hidden md:flex absolute z-0 top-0 bottom-0 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(1,182,212,0.7),transparent_50%)]"></div>
       <div className="z-20 lg:h-[80vh] max-w-7xl flex items-center justify-center mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,8 +28,8 @@ export function About() {
             <div className="space-y-6">
               <AnimatedHeadline
                 text="I'm Abdurrehman, a full stack-web developer, who design and develop custom web solutions. I don't only create websites, I turn your physical presence into digital presence, I create an emotional and an everlasting connection between you and your clients, this is what I've been doing it for 4 years. So what are you waiting for?"
-                as="h3"
-                className="text-xl md:text-2xl font-medium text-center lg:text-justify"
+                as="p"
+                className="text-xl md:text-3xl font-medium text-center lg:text-justify"
               />
             </div>
             <motion.div
@@ -37,10 +37,10 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center mt-2"
+              className="text-center  mt-2"
             >
-              <Button variant="outline" size="lg">
-                Choose a plan
+              <Button variant="outline" className="font-poppins bg-black hover:bg-black ring-2 ring-gray-900 hover:ring-cyan-500" size="lg">
+                Start here
               </Button>
             </motion.div>
           </div>
@@ -71,7 +71,7 @@ export function About() {
                 src="/My-talk.png"
                 alt="Developer portrait"
                 fill
-                className="object-cover hidden md:flex"
+                className="object-cover grayscale hidden md:flex"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />

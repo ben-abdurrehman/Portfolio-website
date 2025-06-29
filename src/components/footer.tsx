@@ -27,14 +27,18 @@ export function Footer() {
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className=" lg:col-span-2 space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="flex items-center space-x-2"
               >
-                <span className="text-xl font-bold">Ben A.</span>
+                <span className="text-xl font-bold">
+                  <Link href={website}>
+                    Ben A.
+                  </Link>
+                  </span>
               </motion.div>
               
               <motion.p
@@ -42,7 +46,7 @@ export function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-muted-foreground leading-relaxed max-w-md"
+                className="text-sm md:text-base font-poppins text-muted-foreground leading-relaxed max-w-md"
               >
                 Creating exceptional digital experiences that help businesses grow 
                 and connect with their audiences. Let's build something amazing together.
@@ -53,7 +57,7 @@ export function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="flex space-x-4"
+                className="flex font-poppins space-x-4"
               >
                 {socialLinks.map((social) => (
                   <Button
@@ -92,7 +96,7 @@ export function Footer() {
                     <li key={link.name}>
                       <button
                         onClick={() => handleNavClick(link.href)}
-                        className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        className="text-muted-foreground font-poppins hover:text-primary transition-colors text-sm"
                       >
                         {link.name}
                       </button>
@@ -113,7 +117,7 @@ export function Footer() {
           viewport={{ once: true }}
           className="py-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0"
         >
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm font-poppins text-muted-foreground">
             © {currentYear} 
             <Link href={website} >
                 <span className='font-semibold text-white hover:text-cyan-500'>
@@ -122,12 +126,12 @@ export function Footer() {
               </Link> 
                 All rights reserved.
           </p>
-          <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+          <div className="flex font-poppins items-center space-x-6 text-sm text-muted-foreground">
             <button className="hover:text-primary transition-colors">
               Privacy Policy
             </button>
             <button className="hover:text-primary transition-colors">
-              Terms of Service
+             Terms of Service
             </button>
           </div>
         </motion.div>

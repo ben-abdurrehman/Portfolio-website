@@ -18,7 +18,7 @@ export default function CalFloatingButton({bgColor} : CalStylingProps) {
     data-cal-link="benabdurrehman/30min"
     
     data-cal-config='{"layout":"month_view"}'
-    className={cn(bgColor, bgColor === "bg-white" ? "text-black hover:bg-cyan-500 hover:text-white" : "text-white hover:bg-cyan-500")}
+    className={cn(bgColor, bgColor === "bg-white" ? "text-black hover:bg-cyan-500 hover:text-white" : "text-white hover:bg-cyan-500", "font-poppins")}
   >Book an appiontment</Button>;
 };
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Poppins:wght@400;700&family=Poppins:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-bigshoulders: 'Big Shoulders Display', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +47,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --cyan-500: #06b6d4;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -78,6 +83,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-bigshoulders);
   }
   
   html {
@@ -101,11 +107,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground));
+  background: var(--cyan-500);
   border-radius: 4px;
 }
 
@@ -131,4 +137,9 @@
 .focus-visible:focus-visible {
   outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
+}
+
+
+.swiper-wrapper {
+  transition-timing-function: linear !important; /* Or any other CSS timing function */
 }
