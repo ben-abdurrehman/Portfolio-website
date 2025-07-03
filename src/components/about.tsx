@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 export function About() {
   return (
     <section id="about" className="py-24 relative bg-black px-6 sm:px-20">
-      <div className="hidden md:flex absolute z-0 top-0 bottom-0 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(1,182,212,0.7),transparent_50%)]"></div>
+      <div className="hidden md:flex absolute z-0 top-0 bottom-10 left-1/2 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(1,182,212,0.7),transparent_50%)]"></div>
       <div className="z-20 lg:h-[80vh] max-w-7xl flex items-center justify-center mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
