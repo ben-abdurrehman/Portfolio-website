@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import AnimatedHeadline from "./AnimatedHeadline";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function About() {
   return (
@@ -40,7 +41,9 @@ export function About() {
               className="text-center  mt-2"
             >
               <Button variant="outline" className="font-poppins bg-black hover:bg-black ring-2 ring-gray-900 hover:ring-cyan-500" size="lg">
-                Start here
+                <Link href="#start">
+                  Start here
+                </Link>
               </Button>
             </motion.div>
           </div>
