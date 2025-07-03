@@ -6,9 +6,21 @@ import { Separator } from '@/components/ui/separator';
 import { socialLinks } from '@/data/objects/footerdata'
 import { footerLinks } from '@/data/objects/footerdata'
 import Link from 'next/link';
+import CONSTANTS from "@/constants/index";
 
 
 export function Footer() {
+const privacyandtemslink = [
+  {
+    label: "Terms of Condition",
+    link: CONSTANTS.TERMS_AND_CONDITION
+  },
+  {
+    label: "Privacy Policy",
+    link: CONSTANTS.PRIVACY_AND_POLICY
+  },
+]
+
   const currentYear = new Date().getFullYear();
   const website = 'https://benabdurrehman.com';
   const handleNavClick = (href: string) => {
@@ -127,12 +139,13 @@ export function Footer() {
                 All rights reserved.
           </p>
           <div className="flex font-poppins items-center space-x-6 text-sm text-muted-foreground">
-            <button className="hover:text-primary transition-colors">
-              Privacy Policy
-            </button>
-            <button className="hover:text-primary transition-colors">
-             Terms of Service
-            </button>
+            {
+              privacyandtemslink.map((data, i) => (
+              <Link key={i} href={data.link} className="hover:text-primary transition-colors">
+                {data.label} 
+              </Link>
+              ))
+            }
           </div>
         </motion.div>
       </div>
