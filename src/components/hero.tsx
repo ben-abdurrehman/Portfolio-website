@@ -28,11 +28,11 @@ export default function Hero() {
       
 
       {/* Photo */}
-      <div className="absolute top-72 lg:top-28  bottom-0 right-0 z-10 flex justify-center w-full h-full">
+      <div className="absolute top-80 lg:top-28  bottom-0 right-0 z-10 flex justify-center w-full h-full">
         <div className="overflow-hidden shadow-xl">
           <div className="absolute rounded-full w-full lg:w-2/5  mx-auto -z-10 inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(1,182,212,0.7),transparent_50%)]"></div>
           <Image
-            className=" mx-auto select-none grayscale z-20 w-4/5 lg:w-2/5"
+            className=" mx-auto select-none grayscale z-20 w-full lg:w-2/5"
             src="/bg-remove3.png"
             alt="Abdur Rehman portrait"
             
