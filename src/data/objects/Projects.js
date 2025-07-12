@@ -4,30 +4,31 @@
 export const projects = [
   {
     title: "Technado",
-    // description: "A secure patient portal with appointment booking, medical records, and telemedicine integration.",
+    description: "A blog posting website, where you write/edit blogs.",
     image: "/mockups/Technado.png",
-    // tags: ["Wordpress", "Elementor", "SQL", "blog"],
+    tags: ["Wordpress", "Elementor", "php", "blog"],
     live: "https://technado.ai"
   },
-  {
-    title: "Bloom-link-nexus",
-    // description: "A comprehensive analytics dashboard with real-time data visualization, user management, and subscription handling.",
-    image: "/mockups/bloom-link-nexus.png",
-    // tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
-    live: "https://bloom-link-nexus.lovable.app/"
-  },
+  
   {
     title: "Kingsbridge",
-    // description: "A stunning landing page for a mobile app with interactive animations, testimonials, and download tracking.",
+    description: "A real-estate website, where a client can view properties.",
     image: "/mockups/kingsbridge.png",
-    // tags: ["Next.js", "typescript", "TailwindCSS"],
+    tags: ["Next.js", "typescript", "TailwindCSS", "Sanity"],
     live: "https://kingsbridge.ae/"
   },
   {
     title: "E-Commerce Platform",
-    // description: "A modern e-commerce solution built with Next.js, featuring real-time inventory, cart, and check-out.",
-    image: "/Hero-sections/Hero-section1.png",
-    // tags: ["Next.js", "javascript", "Swiperjs", "Prisma"],
+    description: "A modern e-commerce solution built with Next.js, featuring real-time inventory, cart, and check-out.",
+    image: "/mockups/AWC.png",
+    tags: ["Next.js", "javascript", "Swiperjs", "Prisma"],
     live: "#"
   },
+  // {
+  //   title: "Bloom-link-nexus",
+  //   // description: "A comprehensive analytics dashboard with real-time data visualization, user management, and subscription handling.",
+  //   image: "/mockups/bloom-link-nexus.png",
+  //   // tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
+  //   live: "https://bloom-link-nexus.lovable.app/"
+  // },
 ];

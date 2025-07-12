@@ -1,91 +1,107 @@
-// components/Work.tsx
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/objects/Projects";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import Link from "next/link";
+
+// interface Project {
+//   title: string
+//   description: string
+//   tags: string[]
+//   image: string
+//   live: string
+// }
+
+// const projects: Project[] = [
+//   {
+//     title: "Collab Platform",
+//     description:
+//       "A platform with real-time chat, task management, and secure communication. Built using Next.js, Socket.io, and Tailwind.",
+//     tags: ["Next.js", "Tailwind", "Socket.io", "TypeScript"],
+//     image: "/0bbc8934-944f-4a1b-a5b4-faf5f1b771b4.png",
+//     live: "https://example.com/project-1",
+//   },
+//   // Add more projects...
+// ]
 
 export function Work() {
-  const swiperRef = useRef<any>(null);
-
   return (
-    <section id="work" className="min-h-screen w-full bg-black flex flex-col px-4 py-10 relative overflow-hidden">
-      {/* Static Left Text */}
-      
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-left space-y-4 w-full z-10 mb-8"
-      >
-        <Badge variant="outline" className="w-fit">
-          Portfolio
-        </Badge>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-          Work I'm Proud Of
-        </h2>
-        <p className="text-sm md:text-base font-poppins text-muted-foreground">
-          Premium design. Flawless code. Built to succeed and built to last.
-        </p>
-      </motion.div>
-      
-      <div className="flex-1 w-full">
-        <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          modules={[Autoplay]}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            waitForTransition: true,
-          }}
-          slidesPerView="auto"
-          speed={8000}
-          loop={true}
-          allowTouchMove={false}
-          spaceBetween={24}
-          className="w-full h-full"
-        >
-          {projects.map((project) => (
-            <SwiperSlide key={project.title} style={{ width: "auto" }}>
-                <Card className="group p-5 h-[30vh] md:h-[45vh] w-[70vw] max-w-[350px] md:w-[70vw] lg:w-[50vw] overflow-hidden transition-all duration-300">
-                  <div className="relative h-auto overflow-hidden rounded-lg">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={800}
-                      height={500}
-                      className="object-cover w-full h-20 md:h-36 group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                      <Button size="sm" variant="secondary" asChild>
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          Live Demo
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                  <CardContent className="p-1 md:p-2">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  </CardContent>
-                </Card>
-            </SwiperSlide>
+    <section id="work" className="bg-black text-white px-6">
+      <div className="max-w-6xl py-20  mx-auto">
+        <div className="flex flex-col items-center justify-center mb-16">
+          <Badge variant="outline" className="text-lg mb-4">
+            Portfolio
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            Featured Projects
+          </h2>
+          <p className="text-muted-foreground font-poppins max-w-xl">
+            Real-world solutions crafted with precision, built for performance.
+          </p>
+        </div>
+
+        <div className="space-y-20">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className={`flex flex-col ring-1 bg-background  hover:ring-cyan-500 ring-gray-900 transition-all group duration-300 p-10 rounded-lg md:flex-row items-center gap-10 ${
+                i % 2 !== 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex-1"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={500}
+                  className="rounded-lg w-full ring-1 group-hover:ring-cyan-500 ring-gray-900 object-cover shadow-md group-hover:scale-[1.015] transition-transform duration-300"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="flex-1"
+              >
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 font-poppins text-base md:text-base">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-white/10 px-3 py-1 text-sm font-poppins rounded-full border border-white/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Button asChild variant="secondary">
+                  <Link
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-4 text-lg w-4" /> Live Demo
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
     </section>
   );
