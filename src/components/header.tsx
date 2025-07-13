@@ -6,6 +6,8 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import CalFloatingButton from './cal.com';
+import Link from 'next/link';
+import CONSTANTS from '@/constants';
 
 
 
@@ -20,6 +22,11 @@ const navigation = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const logo = {
+    label: "BenA.",
+    href: CONSTANTS.WEBSITEURL
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +56,7 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
-      <nav className="max-w-7xl font-poppins mx-auto px-6 sm:px-8">
+      <nav className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
@@ -57,11 +64,13 @@ export function Header() {
             animate={{ opacity: 1 }}
             className="flex items-center space-x-2"
           >
-            <span className="text-xl font-inter font-bold">Ben A.</span>
+            <Link className="text-xl font-bold" href={logo.href}>
+            {logo.label}
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex font-poppins items-center space-x-8">
             {navigation.map((item) => (
               <button
                 key={item.name}

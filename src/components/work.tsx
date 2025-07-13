@@ -31,9 +31,9 @@ import Link from "next/link";
 export function Work() {
   return (
     <section id="work" className="bg-black text-white px-6">
-      <div className="max-w-6xl py-20  mx-auto">
+      <div className="max-w-5xl py-20  mx-auto">
         <div className="flex flex-col items-center justify-center mb-16">
-          <Badge variant="outline" className="text-lg mb-4">
+          <Badge variant="outline" className="text-base mb-4">
             Portfolio
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-2">

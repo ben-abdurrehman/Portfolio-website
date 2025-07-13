@@ -22,7 +22,7 @@ export function About() {
           {/* Content */}
           <div className="flex flex-col items-center lg:items-start gap-5">
             <div className="space-y-8">
-              <Badge variant="outline" className="w-fit">
+              <Badge variant="outline" className="text-base w-fit">
                 About Me
               </Badge>
             </div>

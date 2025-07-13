@@ -77,7 +77,7 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
 
   return (
     <section id="contact" className="py-24 px-6 bg-black sm:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ const onSubmit = async (values: z.infer<typeof formSchema>) => {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4 mb-16"
         >
-          <Badge variant="outline" className="w-fit mx-auto">
+          <Badge variant="outline" className="w-fit text-base mx-auto">
             Contact
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">

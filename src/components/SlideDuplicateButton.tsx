@@ -1,39 +1,7 @@
-// import { Mail, Phone, MessageSquare, Slack } from 'lucide-react'
 "use client"
 
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { faqcta } from '@/data/objects/faq'
-import Image from 'next/image'
-
-
-export function FaqCta() {
-  return (
-    <section className="bg-black relative w-auto md:w-6xl ring-1 ring-cyan-500 z-20 rounded-2xl overflow-hidden text-white text-center">
-      <Image src="/Small-pattern.png" alt="background-lines" className="-z-10 absolute w-full h-full select-none" width={100} height={100}/>
-      <div className="w-auto md:max-w-3xl z-30 mx-auto p-5 md:p-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Still have questions? Let's connect.
-        </h2>
-        <p className="text-gray-400 text-sm md:text-base font-poppins mb-10">
-          Reach out through any of the platforms below — I’ll respond as soon as I can.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center">
-          {faqcta.map((cta, index) => (
-         <FaqCtaButton
-         key={index}
-         icon={cta.icon}
-         label={cta.label}
-         onClick={cta.onclick}
-         bgColor="bg-white"
-       />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 
 interface FaqCtaButtonProps {
   label: string
@@ -90,4 +58,3 @@ interface FaqCtaButtonProps {
     </div>
   )
 }
-

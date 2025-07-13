@@ -78,7 +78,7 @@ export function Services() {
         height={100}
       />
 
-      <div className="max-w-6xl py-20 z-20 mx-auto">
+      <div className="max-w-5xl py-20 z-20 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4 mb-16"
         >
-          <Badge variant="outline" className="w-fit mx-auto">
+          <Badge variant="outline" className="w-fit text-base mx-auto">
             Services
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">

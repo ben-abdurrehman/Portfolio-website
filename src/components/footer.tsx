@@ -34,7 +34,7 @@ const privacyandtemslink = [
 
   return (
     <footer className="bg-black p-10 relative bottom-0">
-      <div className="max-w-6xl rounded-2xl hover:ring-2 transition-all ring-1 ring-cyan-500 mx-auto px-6 sm:px-8">
+      <div className="max-w-5xl rounded-2xl hover:ring-2 transition-all ring-1 ring-cyan-500 mx-auto px-6 sm:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
