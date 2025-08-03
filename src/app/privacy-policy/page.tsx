@@ -1,8 +1,10 @@
 "use client"
 
+import { BackButton } from '@/components/BackButton';
 export default function PrivacyPolicy() {
   return (
     <section className="max-w-4xl font-poppins mx-auto px-6 py-20 text-white bg-black">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
       <p className="text-sm text-gray-400 mb-12">Effective Date: 07/03/2025<br />Website: <a href="https://benabdurrehman.com" className="underline text-cyan-400">benabdurrehman.com</a></p>
 

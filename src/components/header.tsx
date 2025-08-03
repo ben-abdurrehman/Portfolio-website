@@ -1,23 +1,32 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import CalFloatingButton from './cal.com';
-import Link from 'next/link';
-import CONSTANTS from '@/constants';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaLinkedin,
+  FaSquareUpwork,
+  FaBarsStaggered,
+  FaXmark,
+} from "react-icons/fa6";
+import { HiReply } from "react-icons/hi";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import CalFloatingButton from "./cal.com";
+import Link from "next/link";
+import CONSTANTS from "@/constants";
+import { Divide } from "lucide-react";
 
-
-
-const navigation = [
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Work', href: '#work' },
-  { name: 'FAQ', href: '#faq' },
-  { name: 'Contact', href: '#contact' },
+const navigationlinks = [
+  { name: "Services", href: "#services" },
+  { name: "Work", href: "#work" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Contact", href: "#contact" },
+  { name: "Hire me", href: "#hire", icon: <HiReply className="h-4 w-4" /> },
 ];
+// const hireButtons = [
+//     { name: 'Upwork',icon: <FaSquareUpwork className="h-10 rounded-full w-10 text-[#14a800]" />, href: 'https://www.linkedin.com/in/abdurrehman-waseem/' },
+//     { name: 'LinkedIn' ,icon: <FaLinkedin className="h-10 rounded-full w-10 text-[#0077B5]" />, href: 'https://www.linkedin.com/in/abdurrehman-waseem/' },
+// ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +34,7 @@ export function Header() {
 
   const logo = {
     label: "BenA.",
-    href: CONSTANTS.WEBSITEURL
+    href: CONSTANTS.WEBSITEURL,
   };
 
   useEffect(() => {
@@ -33,15 +42,15 @@ export function Header() {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -50,40 +59,54 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-border'
-          : 'bg-transparent'
+        "w-full flex items-center justify-center transition-all duration-300"        
       )}
     >
-      <nav className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+      <nav className={cn("max-w-7xl w-4/5 fixed top-2 rounded-3xl mx-auto px-6 sm:px-8 transition-all duration-300 z-50", 
+       isScrolled
+          ? "bg-background/80 backdrop-blur-md border border-border"
+          : "bg-transparent")}>
+        <div className="flex justify-between items-center h-16">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="flex items-center space-x-2"
+            className="flex items-center w-1/4 justify-center space-x-2"
           >
             <Link className="text-xl font-bold" href={logo.href}>
-            {logo.label}
+              {logo.label}
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex font-poppins items-center space-x-8">
-            {navigation.map((item) => (
+          <div className="hidden md:flex font-poppins w-3/4 items-center justify-center">
+            {navigationlinks.map((item, i) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className={cn(i === 4 && "ml-6","text-muted-foreground group max-w-[20%] w-[15%] h-6 flex justify-end")}
               >
-                {item.name}
+                <span className="relative font-normal w-full h-full overflow-hidden">    
+                  <span className="text-white text-sm absolute inset-0 group-hover:-translate-y-full transition-transform duration-500">
+                    {item.name}
+                  </span> 
+                  <span className="text-cyan-500 text-sm absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                      {item.name}
+                  </span> 
+                </span>
+                {item.icon && 
+                  <div className="relative w-6 h-6 flex text-sm items-end justify-end overflow-hidden">
+                            <div className="text-white absolute inset-0 group-hover:-translate-x-full transition-transform duration-500" >{item.icon} </div>
+                            {/* Incoming arrow from right */}
+                            <div className="text-cyan-500 absolute inset-0 translate-x-full group-hover:translate-x-0 transition-transform duration-500" >{item.icon} </div>
+                            </div>
+                }
               </button>
             ))}
-            <CalFloatingButton bgColor="bg-white"/>
           </div>
 
-          {/* Mobile Menu Button */}
+          <div className="hidden w-1/4 md:flex items-center justify-center">
+            <CalFloatingButton bgColor="bg-white" />
+          </div>
+
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -92,25 +115,24 @@ export function Header() {
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <FaXmark className="h-6 w-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <FaBarsStaggered className="h-6 w-6" />
               )}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-4 border-t border-border">
-                {navigation.map((item) => (
+                {navigationlinks.flat().map((item) => (
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
@@ -119,13 +141,8 @@ export function Header() {
                     {item.name}
                   </button>
                 ))}
-                {/* <Button 
-                  onClick={() => handleNavClick('#contact')}
-                  className="w-full mt-4"
-                >
-                  Get In Touch
-                </Button> */}
-                <CalFloatingButton bgColor="bg-white"/>
+
+                <CalFloatingButton bgColor="bg-white" />
               </div>
             </motion.div>
           )}

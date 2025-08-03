@@ -30,10 +30,10 @@ const cardData = [
 
 export default function UpworkNLinkedinCTAs() {
   return (
-    <section id="start" className="bg-black flex items-center justify-center min-h-[100vh] relative w-full overflow-hidden text-center">
+    <section id="hire" className="bg-black flex items-center justify-center min-h-[100vh] relative w-full overflow-hidden text-center">
       <div className="max-w-5xl z-30 py-20 mx-auto px-6">
         <h2 className="text-4xl text-cyan-500 md:text-5xl font-bold mb-10">
-          Ready to collaborate on your next big idea?
+          Ready to collaborate <br /> on your next big idea?
         </h2>
         <p className="text-sm md:text-base font-poppins text-white mb-14">
           Whether it's through LinkedIn or Upwork, I'm ready to work with you.

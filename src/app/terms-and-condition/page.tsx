@@ -1,8 +1,11 @@
 "use client"
 
+import { BackButton } from "@/components/BackButton"
+
 export default function TermsPage() {
   return (
     <section className="max-w-4xl font-poppins mx-auto px-6 py-20 text-white bg-black">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
       <p className="text-sm text-gray-400 mb-12">Effective Date: 07/03/2025</p>
 
