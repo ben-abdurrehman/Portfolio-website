@@ -13,7 +13,7 @@ export const projects = [
   {
     title: "Kingsbridge",
     description: "A real-estate website, where a client can view properties.",
-    image: "/mockups/kingsbridge.webp",
+    image: "/mockups/Kingsbridge.webp",
     tags: ["Next.js", "typescript", "TailwindCSS", "Sanity"],
     live: "https://kingsbridge.ae/"
   },

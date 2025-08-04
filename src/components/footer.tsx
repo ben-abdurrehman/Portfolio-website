@@ -33,8 +33,8 @@ const privacyandtemslink = [
   };
 
   return (
-    <footer className="bg-black p-10 relative bottom-0">
-      <div className="max-w-5xl rounded-2xl hover:ring-2 transition-all ring-1 ring-cyan-500 mx-auto px-6 sm:px-8">
+    <footer className="bg-black pb-10 md:p-10 relative bottom-0">
+      <div className="w-[90%] md:max-w-5xl rounded-2xl hover:ring-2 transition-all ring-1 ring-cyan-500 mx-auto px-6 sm:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -127,18 +127,18 @@ const privacyandtemslink = [
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="py-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0"
+          className="py-6 flex flex-col sm:flex-row items-center justify-center lg:justify-between space-y-4 sm:space-y-0"
         >
-          <p className="text-sm font-poppins text-muted-foreground">
+          <p className="text-sm text-center lg:text-left font-poppins text-muted-foreground">
             © {currentYear} 
             <Link href={website} >
                 <span className='font-semibold text-white hover:text-cyan-500'>
-                &nbsp;Ben A.&nbsp;  
+                &nbsp;benabdurrehman&nbsp;  
                 </span>
               </Link> 
                 All rights reserved.
           </p>
-          <div className="flex font-poppins items-center space-x-6 text-sm text-muted-foreground">
+          <div className="flex max-sm:flex-col font-poppins items-center justify-center md:space-x-6 text-sm text-muted-foreground">
             {
               privacyandtemslink.map((data, i) => (
               <Link key={i} href={data.link} className="hover:text-primary transition-colors">

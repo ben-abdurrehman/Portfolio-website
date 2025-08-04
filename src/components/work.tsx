@@ -30,7 +30,7 @@ export function Work() {
           {projects.map((project, i) => (
             <div
               key={i}
-              className={`flex flex-col ring-1 bg-background  hover:ring-cyan-500 ring-gray-900 transition-all group duration-300 p-10 rounded-lg md:flex-row items-center gap-10 ${
+              className={`flex flex-col ring-1 bg-background  hover:ring-cyan-500 ring-gray-900 transition-all group duration-300 p-3 md:p-5 lg:p-10 rounded-lg md:flex-row items-center gap-10 ${
                 i % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >

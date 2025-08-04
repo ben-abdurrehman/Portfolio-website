@@ -41,7 +41,7 @@ export function About() {
               className="text-center  mt-2"
             >
               <Button variant="outline" className="font-poppins bg-black hover:bg-black ring-2 ring-gray-900 hover:ring-cyan-500" size="lg">
-                <Link href="#start">
+                <Link href="#hire">
                   Start here
                 </Link>
               </Button>

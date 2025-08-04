@@ -65,7 +65,7 @@ export function Header() {
       <nav className={cn("max-w-7xl w-4/5 fixed top-2 rounded-3xl mx-auto px-6 sm:px-8 transition-all duration-300 z-50", 
        isScrolled
           ? "bg-background/80 backdrop-blur-md border border-border"
-          : "bg-transparent")}>
+          : "bg-black")}>
         <div className="flex justify-between items-center h-16">
           <motion.div
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ export function Header() {
             </Link>
           </motion.div>
 
-          <div className="hidden md:flex font-poppins w-3/4 items-center justify-center">
+          <div className="hidden lg:flex font-poppins w-3/4 items-center justify-center">
             {navigationlinks.map((item, i) => (
               <button
                 key={item.name}
@@ -103,11 +103,11 @@ export function Header() {
             ))}
           </div>
 
-          <div className="hidden w-1/4 md:flex items-center justify-center">
+          <div className="hidden w-1/4 lg:flex items-center justify-center">
             <CalFloatingButton bgColor="bg-white" />
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -129,7 +129,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden"
+              className="lg:hidden overflow-hidden"
             >
               <div className="py-4 space-y-4 border-t border-border">
                 {navigationlinks.flat().map((item) => (
