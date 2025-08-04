@@ -5,7 +5,7 @@ export const projects = [
   {
     title: "Technado",
     description: "A blog posting website, where you write/edit blogs.",
-    image: "/mockups/Technado.png",
+    image: "/mockups/Technado.webp",
     tags: ["Wordpress", "Elementor", "php", "blog"],
     live: "https://technado.ai"
   },
@@ -13,14 +13,14 @@ export const projects = [
   {
     title: "Kingsbridge",
     description: "A real-estate website, where a client can view properties.",
-    image: "/mockups/kingsbridge.png",
+    image: "/mockups/kingsbridge.webp",
     tags: ["Next.js", "typescript", "TailwindCSS", "Sanity"],
     live: "https://kingsbridge.ae/"
   },
   {
     title: "E-Commerce Platform",
     description: "A modern e-commerce solution built with Next.js, featuring real-time inventory, cart, and check-out.",
-    image: "/mockups/AWC.png",
+    image: "/mockups/AWC.webp",
     tags: ["Next.js", "javascript", "Swiperjs", "Prisma"],
     live: "#"
   },

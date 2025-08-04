@@ -58,7 +58,7 @@ export function About() {
           >
             <div className="relative  h-[500px] overflow-hidden">
               <Image
-                src="/My-talk.png"
+                src="/My-talk.webp"
                 alt="Developer portrait"
                 fill
                 className="object-cover grayscale hidden md:flex"

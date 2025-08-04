@@ -8,25 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/objects/Projects";
 import Link from "next/link";
 
-// interface Project {
-//   title: string
-//   description: string
-//   tags: string[]
-//   image: string
-//   live: string
-// }
 
-// const projects: Project[] = [
-//   {
-//     title: "Collab Platform",
-//     description:
-//       "A platform with real-time chat, task management, and secure communication. Built using Next.js, Socket.io, and Tailwind.",
-//     tags: ["Next.js", "Tailwind", "Socket.io", "TypeScript"],
-//     image: "/0bbc8934-944f-4a1b-a5b4-faf5f1b771b4.png",
-//     live: "https://example.com/project-1",
-//   },
-//   // Add more projects...
-// ]
 
 export function Work() {
   return (

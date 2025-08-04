@@ -56,7 +56,7 @@ export function Services() {
       />
       <div className="absolute left-0 right-0 bottom-0 w-full h-[20vh] bg-gradient-to-t from-black via-transparent to-transparent z-20" />
       <div className="absolute left-0 right-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black via-transparent to-transparent z-20" />
-      <div className="absolute inset-0 w-full h-full bg-[url('/Linespattern.png')] bg-cover bg-fixed  z-0" />
+      <div className="absolute inset-0 w-full h-full bg-[url('/Linespattern.webp')] bg-cover bg-fixed  z-0" />
       {/* Overlays */}
      
 
@@ -90,7 +90,7 @@ export function Services() {
             >
               <Card className="h-full ring-2 ring-gray-900 hover:ring-cyan-500 transition-shadow duration-300 group">
                 <CardHeader className="space-y-4">
-                  <div className="w-12 h-12 group-hover:bg-cyan-500 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-12 h-12 group-hover:bg-cyan-500 bg-primary/10 rounded-lg flex items-center justify-center transition-colors">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
