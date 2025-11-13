@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'Ben Abdurrehman',
     images: [
       {
-        url: '/favicon.svg',
+        url: '/graph-image.png',
         width: 1200,
         height: 630,
       },
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Developer | Websites & Apps That Convert',
     description: 'Expert web developer specializing in modern websites and applications that drive results.',
-    images: ['/favicon.svg'],
+    images: ['/graph-image.png'],
   },
   robots: {
     index: true,
