@@ -32,18 +32,18 @@ export default function UpworkNLinkedinCTAs() {
   return (
     <section id="hire" className="bg-black flex items-center justify-center min-h-[100vh] relative w-full overflow-hidden text-center">
       <div className="max-w-5xl z-30 py-20 mx-auto px-6">
-        <h2 className="text-4xl text-cyan-500 md:text-5xl font-bold mb-10">
+        <h2 className="text-4xl text-cyan-500 md:text-5xl font-medium mb-10">
           Ready to collaborate <br /> on your next big idea?
         </h2>
-        <p className="text-sm md:text-base font-poppins text-white mb-14">
+        <p className="text-sm md:text-base font-poppins text-muted-foreground mb-14">
           Whether it's through LinkedIn or Upwork, I'm ready to work with you.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cardData.map((data, index) => (
           <div key={index} className={cn(data.color, data.borderColor, "border p-8 rounded-2xl shadow-lg flex flex-col bg-opacity-20 items-center")}>
             {data.icon}    
-            <h3 className="text-xl font-semibold mb-2">{data.heading}</h3>
-            <p className="text-gray-500 font-poppins mb-4">
+            <h3 className="text-xl font-medium mb-2">{data.heading}</h3>
+            <p className="text-gray-300 font-poppins mb-4">
               {data.description}
             </p>
             <Button
