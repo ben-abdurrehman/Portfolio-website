@@ -46,12 +46,12 @@ export default function UpworkNLinkedinCTAs() {
             <p className="text-gray-300 font-poppins mb-4">
               {data.description}
             </p>
-            <Button
-              className={cn(data.color, data.borderColor , "font-poppins border text-white hover:bg-transparent transform transition-all hover:scale-105")}
+            <button
+              className={cn(data.color, data.borderColor , "font-poppins border text-white px-4 py-2 rounded-xl hover:bg-transparent transform transition-all hover:scale-105")}
               onClick={data.onclick}
             >
               {data.btntext}
-            </Button>
+            </button>
           </div>
           ))}
         </div>
