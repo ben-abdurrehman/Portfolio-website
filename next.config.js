@@ -7,13 +7,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-
-module.exports = {
-  swcMinify: true,
-  // Required for smaller JS bundles in modern browsers:
-  experimental: {
-    legacyBrowsers: false,
-    browsersListForServer: true
-  }
-};
