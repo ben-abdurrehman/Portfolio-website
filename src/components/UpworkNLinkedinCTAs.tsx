@@ -8,6 +8,7 @@ import { FaLinkedin, FaSquareUpwork } from "react-icons/fa6";
 
 const cardData = [
   {
+      id: 1,
       icon: <FaLinkedin className="h-10 w-10 text-[#0077B5] mb-4" />,
       heading: "Connect on LinkedIn",
       description: "Reach out on LinkedIn to discuss how we can work together.",
@@ -17,6 +18,7 @@ const cardData = [
       borderColor: "border-[#0077B5]",
   },
   {
+      id: 2,
       icon: <FaSquareUpwork className="h-10 w-10 text-[#14a800] mb-4" />, 
       heading: "Hire on Upwork",
       description: "Invite me to your project on Upwork and let's get started.",
@@ -47,7 +49,7 @@ export default function UpworkNLinkedinCTAs() {
               {data.description}
             </p>
             <button
-              className={cn(data.color, data.borderColor , "font-poppins border text-white px-4 py-2 rounded-xl hover:bg-transparent transform transition-all hover:scale-105")}
+              className={cn(data.color, data.borderColor, data.id === 1 ? "text-white" : "text-black hover:text-[#14A800]",   "font-poppins border px-4 py-2 rounded-xl hover:bg-transparent transform transition-all hover:scale-105")}
               onClick={data.onclick}
             >
               {data.btntext}
