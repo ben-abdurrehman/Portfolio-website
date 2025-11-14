@@ -15,13 +15,13 @@ export function Work() {
     <section id="work" className="bg-black text-white px-6">
       <div className="max-w-5xl py-20  mx-auto">
         <div className="flex flex-col items-center justify-center mb-16">
-          <Badge variant="outline" className="text-base mb-4">
+          <Badge variant="outline" className="mb-4 text-base font-thin border-t-gray-300 border-x-gray-400 border-b-gray-600">
             Portfolio
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+          <h2 className="text-4xl md:text-5xl font-medium mb-2">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground font-poppins max-w-xl">
+          <p className="text-muted-foreground font-light font-poppins max-w-xl">
             Real-world solutions crafted with precision, built for performance.
           </p>
         </div>

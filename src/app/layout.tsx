@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Big_Shoulders_Display, Poppins, Bebas_Neue } from 'next/font/google';
+import {Poppins, Bebas_Neue } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
 
@@ -10,20 +10,6 @@ export const poppins = Poppins({
   variable: '--font-poppins',
   display: 'swap',
 });
-
-// export const inter = Inter({
-//   subsets: ['latin'],
-//   weight: ['400', '500', '600', '700'],
-//   variable: '--font-inter',
-//   display: 'swap',
-// });
-
-// export const bigShoulders = Big_Shoulders_Display({
-//   subsets: ['latin'],
-//   weight: ['400', '500', '600', '700'],
-//   variable: '--font-bigShoulders',
-//   display: 'swap',
-// });
 
 export const BebasNeue = Bebas_Neue({
   subsets: ['latin'],

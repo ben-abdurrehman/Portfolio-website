@@ -63,7 +63,7 @@ export default function Hero() {
         
         {/* Background pattern */}
         <Image 
-          src={"/dot-lines.png"} 
+          src={"/dot-lines.webp"}
           alt="Dotted lines background" 
           width={100} 
           height={100} 

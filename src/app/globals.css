@@ -12,7 +12,6 @@
   --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-bebas-neue: 'Bebas Neue', sans-serif;
-  /* --font-bigshoulders: 'Big Shoulders Display', sans-serif; */
 }
 
 .bebas-neue-regular {
@@ -29,6 +28,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+h1, h1 > * span, h2, h2 > * span, h3, h3 > * span, h4, h4 > * span, h5, h5 > * span, h6, h6 > * span, span > h1, span > h2, span > h3, span > h4, span > h5, span > h6{
+  font-family: var(--font-bebas-neue);
+}
+
+p, div, span, a, li, td, th, nav, button, input, label {
+  font-family: var(--font-poppins);
+}
+
+
 
 @layer base {
   :root {
@@ -113,7 +122,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
