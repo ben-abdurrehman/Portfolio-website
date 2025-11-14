@@ -32,27 +32,16 @@ export function About() {
                 className="text-xl md:text-4xl font-medium text-center lg:text-justify"
               />
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center  mt-2"
-            >
+            
               <Button variant="outline" className="font-poppins bg-black hover:bg-black ring-2 ring-gray-900 hover:ring-cyan-500" size="lg">
                 <Link href="#hire">
                   Start here
                 </Link>
               </Button>
-            </motion.div>
           </div>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
             className="relative"
           >
             <div className="flex absolute z-0 top-0 bottom-10 right-0 bg-[radial-gradient(circle_at_50%_50%,rgba(1,182,212,0.7),transparent_50%)]"></div>
@@ -63,14 +52,14 @@ export function About() {
                 src="/bg-remove3.webp"
                 alt="Developer portrait"
                 fill
-                className="object-cover aspect-square grayscale flex select-none"
+                className="object-cover aspect-square grayscale will-change-transform flex select-none"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
 
               {/* <Image src="/gradientoverlay.webp" alt="gradientoverlay" className="z-30 grayscale-100 absolute bottom-0 w-full h-auto" width={100} height={10} /> */}
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

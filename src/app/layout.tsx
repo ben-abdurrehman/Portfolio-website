@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import {Poppins, Bebas_Neue } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import SmoothScroll from '@/components/SmoothScroll';
 
 
 export const poppins = Poppins({
@@ -120,7 +121,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SmoothScroll>
+            {children}  
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

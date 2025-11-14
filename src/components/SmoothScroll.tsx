@@ -1,34 +1,3 @@
-// "use client"
-
-// import { useEffect, useRef } from "react"
-// import LocomotiveScroll from "locomotive-scroll"
-// import "locomotive-scroll/dist/locomotive-scroll.css"
-
-// export default function SmoothScroll({ children }: { children: React.ReactNode }) {
-//   const containerRef = useRef(null)
-
-//   useEffect(() => {
-//     const scroll = new LocomotiveScroll({
-//       el: containerRef.current!,
-//       smooth: true,
-//       multiplier: 1.2, // controls scroll speed
-//       class: 'is-reveal'
-//     })
-
-//     return () => {
-//       scroll.destroy()
-//     }
-//   }, [])
-
-//   return (
-//     <div data-scroll-container ref={containerRef}>
-//       {children}
-//     </div>
-//   )
-// }
-
-
-
 // components/SmoothScroll.tsx
 "use client"
 
@@ -40,21 +9,26 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2, // controls speed (lower = faster)
+      duration: 1.2, // Reduced from 2 for snappier feel
       smoothWheel: true,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // custom easing
+      wheelMultiplier: 1, // Add this to prevent over-scrolling
+      touchMultiplier: 2,
+      infinite: false,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     })
 
     lenisRef.current = lenis
 
+    let rafId: number
     function raf(time: number) {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    rafId = requestAnimationFrame(raf)
 
     return () => {
+      cancelAnimationFrame(rafId)
       lenis.destroy()
     }
   }, [])

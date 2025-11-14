@@ -9,12 +9,11 @@ import { FAQ } from '@/components/faq';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 import UpworkNLinkedinCTAs from '@/components/UpworkNLinkedinCTAs';
-import SmoothScroll from "@/components/SmoothScroll"
 // import { ProjectFanGrid } from '@/components/projectFanGrid';
 
 export default function Home() {
   return (
-    <SmoothScroll>
+  
       <main className="min-h-screen w-[100vw] overflow-hidden bg-background">
         <Header />
         <Hero />
@@ -27,6 +26,5 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-    </SmoothScroll>
   );
 }
