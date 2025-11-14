@@ -68,7 +68,8 @@ export default function Hero() {
           width={100} 
           height={100} 
           className="absolute opacity-50 sm:opacity-60 md:opacity-70 inset-0 w-full h-full object-cover z-10" 
-          priority
+          fetchPriority="low"
+          loading="lazy"
         />
 
         {/* Main content */}
